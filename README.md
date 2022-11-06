@@ -2,10 +2,9 @@
 Using Hive and Spark and SQL to analyze the data regarding transportation
 
 Using three datasets Sales_data.csv, Company_data.csv and company __Emp_data1.csv in Hadoop environment and SQL to create different reports.
-
-**CREATE SALES TABLE IN HIVE 2.0 **
+# CREATE SALES TABLE IN HIVE 2.0
 Schema of columns for the external table:
-
+```
 CREATE TABLE IF NOT EXISTS sales 
 (
 ORDERNUMBER INT,
@@ -42,5 +41,22 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE ;
 
 LOAD DATA INPATH '/user/maria_dev/drivers.csv' OVERWRITE INTO TABLE drivers
+```
 
+# PROCESS DATA IN ZEPPELIN
 
+Go to Zeppelin Notebook
+// Create a Company_Emp_data1 DataFrame from CSV file
+```
+val Company_Emp_data1 = (spark.read
+.option("header", "true") // Use first line as header
+.option("inferSchema", "true") // Infer schema
+.csv("/tmp/Company_Emp_data1.csv"))
+```
+// Create a company_data DataFrame from CSV file
+```
+val company_data = (spark.read
+.option("header", "true") // Use first line as header
+.option("inferSchema", "true") // Infer schema
+.csv("/tmp/company_data.csv"))
+```
