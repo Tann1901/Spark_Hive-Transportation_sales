@@ -80,7 +80,9 @@ Company_data.createOrReplaceTempView(“CompView”)
 ```
 
 # ANALYSIS
-Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
+# ANALYSIS
+
+# Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
 ```
 %spark2.sql
 SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
@@ -108,4 +110,42 @@ SELECT sum(Revenue), country
 FROM Salesview
 WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
 GROUP BY country
+```
+
+# Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color
+
+```
+%spark2.sql
+SELECT sum(s.revenue), s.productline, c.name
+FROM sales s
+JOIN compview as c on c.companyID = s.companyID
+WHERE c.companyID < 8
+GROUP BY s.productline, c.name
+```
+
+# Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
+```
+%spark2.sql
+SELECT sum(revenue), productline, country
+FROM sales
+WHERE
+(
+(productline = ‘Trucks and Buses’)
+OR
+(productline = ‘ Planes’)
+)
+AND
+(country = ‘USA’)
+GROUP BY productline, country ORDER BY sum(revenue) DESC
+```
+
+# Present average salary for each company by name – present the average salary in a bar chart with the highest average salary first.
+
+```
+%spark2.sql
+SELECT avg(e.salary), e.companyID, c.Name
+FROM empview e, compview c
+WHERE e.companyID = c.companyID
+GROUP BY e.companyID, c.name
+ORDER BY avg(e.salary) DESC
 ```
