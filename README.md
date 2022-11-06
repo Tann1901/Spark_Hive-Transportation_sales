@@ -5,7 +5,7 @@ Using three datasets Sales_data.csv, Company_data.csv and company __Emp_data1.cs
 
 **CREATE SALES TABLE IN HIVE 2.0 **
 Schema of columns for the external table:
-
+//
 CREATE TABLE IF NOT EXISTS sales 
 (
 ORDERNUMBER INT,
@@ -42,5 +42,6 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE ;
 
 LOAD DATA INPATH '/user/maria_dev/drivers.csv' OVERWRITE INTO TABLE drivers
+//
 
 
