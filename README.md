@@ -45,14 +45,16 @@ LOAD DATA INPATH '/user/maria_dev/drivers.csv' OVERWRITE INTO TABLE drivers
 # PROCESS DATA IN ZEPPELIN
 
 Go to Zeppelin Notebook
-// Create a Company_Emp_data1 DataFrame from CSV file
+
+Create a Company_Emp_data1 DataFrame from CSV file
 ```
 val Company_Emp_data1 = (spark.read
 .option("header", "true") // Use first line as header
 .option("inferSchema", "true") // Infer schema
 .csv("/tmp/Company_Emp_data1.csv"))
 ```
-// Create a company_data DataFrame from CSV file
+
+Create a company_data DataFrame from CSV file
 ```
 val company_data = (spark.read
 .option("header", "true") // Use first line as header
