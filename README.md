@@ -42,8 +42,11 @@ STORED AS TEXTFILE ;
 
 LOAD DATA INPATH '/user/maria_dev/drivers.csv' OVERWRITE INTO TABLE drivers
 ```
+<<<<<<< HEAD
 
 # PROCESS DATA IN ZEPPELIN
+=======
+>>>>>>> 4ad9a903123523458824dd58da752ad6eb4c4fe8
 
 Go to Zeppelin Notebook
 // Create a Company_Emp_data1 DataFrame from CSV file
