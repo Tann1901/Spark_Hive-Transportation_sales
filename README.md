@@ -61,3 +61,51 @@ val company_data = (spark.read
 .option("inferSchema", "true") // Infer schema
 .csv("/tmp/company_data.csv"))
 ```
+Print Schema Company_Emp_data1
+```
+Company_Emp_data1.printSchema()
+```
+PrintSchema company_data
+```
+company_data.printSchema()
+```
+
+Create Tempview Company_Emp_data1
+```
+Company_Emp_data1.createOrReplaceTempView(“EmpView”)
+```
+Create Tempview Compview
+```
+Company_data.createOrReplaceTempView(“CompView”)
+```
+
+# ANALYSIS
+Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
+```
+%spark2.sql
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country=’USA’ GROUP BY Country
+UNION
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country=’UK’ GROUP BY Country
+UNION
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country=’France’ GROUP BY Country
+UNION
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country=’Austria’ GROUP BY Country
+UNION
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country='Canada' GROUP BY Country
+UNION
+SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
+WHERE country='Denmark' GROUP BY Country
+```
+Or
+```
+%spark2.sql
+SELECT sum(Revenue), country
+FROM Salesview
+WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
+GROUP BY country
+```
