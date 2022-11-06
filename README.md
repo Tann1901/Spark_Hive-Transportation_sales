@@ -110,7 +110,10 @@ FROM Salesview
 WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
 GROUP BY country
 ```
-II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color
+RESULT
+
+
+II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
 
 ```
 %spark2.sql
