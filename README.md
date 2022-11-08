@@ -111,7 +111,9 @@ WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
 GROUP BY country
 ```
 RESULT
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/pie%20chart.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%201.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%203.jpg" height="400">
 
 II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
 
@@ -124,8 +126,8 @@ WHERE c.companyID < 8
 GROUP BY s.productline, c.name
 ```
 RESULT
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/productline.jpg" height="400">
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/line%20chart.jpg" height="350">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart1.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart2.jpg" height="350">
 
 
 III. Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
@@ -143,6 +145,9 @@ AND
 (country = ‘USA’)
 GROUP BY productline, country ORDER BY sum(revenue) DESC
 ```
+RESULT
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart2.jpg" height="400">
 
 IV. Present average salary for each company by name – present the average salary in a bar chart with the highest average salary first.
 
@@ -154,3 +159,5 @@ WHERE e.companyID = c.companyID
 GROUP BY e.companyID, c.name
 ORDER BY avg(e.salary) DESC
 ```
+RESULT
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/IV.%20Average%20salary%20with%20ranking.jpg" height="400">
