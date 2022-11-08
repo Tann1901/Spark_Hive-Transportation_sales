@@ -125,7 +125,7 @@ GROUP BY s.productline, c.name
 ```
 RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/productline.jpg" height="400">
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/Truck_Train_Plans.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/line%20chart.jpg" height="400">
 
 
 III. Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
