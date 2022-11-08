@@ -81,7 +81,6 @@ Company_data.createOrReplaceTempView(“CompView”)
 
 # ANALYSIS
 
-
 ### I. Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
 ```
 %spark2.sql
@@ -111,7 +110,7 @@ FROM Salesview
 WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
 GROUP BY country
 ```
-RESULT
+#### RESULT
 
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%201.jpg" height="400">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="200">
@@ -128,7 +127,7 @@ JOIN compview as c on c.companyID = s.companyID
 WHERE c.companyID < 8
 GROUP BY s.productline, c.name
 ```
-RESULT
+#### RESULT
 
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart1.jpg" height="250">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart2.jpg" height="350">
@@ -149,7 +148,7 @@ AND
 (country = ‘USA’)
 GROUP BY productline, country ORDER BY sum(revenue) DESC
 ```
-RESULT
+#### RESULT
 
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart.jpg" height="250">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart2.jpg" height="400">
@@ -165,5 +164,6 @@ WHERE e.companyID = c.companyID
 GROUP BY e.companyID, c.name
 ORDER BY avg(e.salary) DESC
 ```
-RESULT
+#### RESULT
+
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/IV.%20Average%20salary%20with%20ranking.jpg" height="400">
