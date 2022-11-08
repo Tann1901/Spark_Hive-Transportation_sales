@@ -82,7 +82,7 @@ Company_data.createOrReplaceTempView(“CompView”)
 # ANALYSIS
 
 
-###I. Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
+### I. Produce a pie chart with the Cumulation of revenue by country from Sales  for the following countries : USA, UK, France, Austria, Canada and Denmark.
 ```
 %spark2.sql
 SELECT sum(revenue) AS Cumulative_Revenue, country AS Country FROM sales
@@ -118,7 +118,7 @@ RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%203.jpg" height="350">
 
 
-###II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
+### II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
 
 ```
 %spark2.sql
@@ -134,7 +134,7 @@ RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart2.jpg" height="350">
 
 
-###III. Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
+### III. Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
 ```
 %spark2.sql
 SELECT sum(revenue), productline, country
@@ -155,7 +155,7 @@ RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart2.jpg" height="400">
 
 
-###IV. Present average salary for each company by name – present the average salary in a bar chart with the highest average salary first.
+### IV. Present average salary for each company by name – present the average salary in a bar chart with the highest average salary first.
 
 ```
 %spark2.sql
