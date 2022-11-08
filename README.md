@@ -112,8 +112,8 @@ GROUP BY country
 ```
 RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%201.jpg" height="400">
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="300">
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%203.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="250">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%203.jpg" height="350">
 
 II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
 
@@ -146,6 +146,7 @@ AND
 GROUP BY productline, country ORDER BY sum(revenue) DESC
 ```
 RESULT
+
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart.jpg" height="400">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart2.jpg" height="400">
 
