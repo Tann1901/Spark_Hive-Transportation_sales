@@ -111,7 +111,7 @@ WHERE country in ("USA","UK","France","Austria","Canada","Denmark")
 GROUP BY country
 ```
 RESULT
-
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/pie%20chart.jpg" height="400">
 
 II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
 
@@ -123,6 +123,8 @@ JOIN compview as c on c.companyID = s.companyID
 WHERE c.companyID < 8
 GROUP BY s.productline, c.name
 ```
+RESULT
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/pie%20chart.jpg" height="400">
 
 III. Present Revenue of vehicles like Trucks & Planes as an acquisition strategy with a bar chart with the sum of revenue by company name in order of ascending revenue filtered for country USA and for product line “Trucks and Buses” and “Planes”.
 ```
