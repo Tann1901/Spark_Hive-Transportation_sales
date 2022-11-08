@@ -149,7 +149,7 @@ GROUP BY productline, country ORDER BY sum(revenue) DESC
 ```
 RESULT
 
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart.jpg" height="200">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart.jpg" height="250">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/III.Plane%26Truck%20Bar%20chart2.jpg" height="400">
 
 IV. Present average salary for each company by name – present the average salary in a bar chart with the highest average salary first.
