@@ -128,7 +128,7 @@ GROUP BY s.productline, c.name
 ```
 RESULT
 
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart1.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart1.jpg" height="250">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/II.Transportation_Linechart2.jpg" height="350">
 
 
