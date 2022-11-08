@@ -112,7 +112,7 @@ GROUP BY country
 ```
 RESULT
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%201.jpg" height="400">
-<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="400">
+<img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%202.jpg" height="300">
 <img src="https://github.com/Tann1901/spark-hive-transportation-sales/blob/main/photos/I.%20Country%20pie%20chart%203.jpg" height="400">
 
 II. Line chart of all sales grouped by productline , each productline will be represented in the chart by a different line and color, within 8 company ID
